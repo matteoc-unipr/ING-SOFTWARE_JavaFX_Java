@@ -1,0 +1,53 @@
+package com.matteo;
+
+import java.util.Scanner;
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		
+		// Opening input stream
+		Scanner input = new Scanner(System.in);
+		
+		double n1, out;
+		out = 0;
+		String op;	// +  -  *  /  %
+		
+		System.out.print("Select operation (+, -, /, *, %):");
+		op = input.next();
+		if (op == "") {
+			System.exit(0);
+		}
+
+		System.out.print("Insert operands:");
+		out = input.nextDouble();
+		n1 = input.nextDouble();
+		
+		//Switch-case syntax for operations
+		switch(op) {
+		case "+":
+			out += n1;
+			break;
+		case "-":
+			out -= n1;
+			break;
+		case "*":
+			out *= n1;
+			break;
+		case "/":
+			out /= n1;
+			break;
+		case "%":
+			out %= n1;
+			break;
+		default:
+			System.out.println("Invalid operation....Try again");
+		}
+
+		
+
+
+		input.close();
+	}
+
+}

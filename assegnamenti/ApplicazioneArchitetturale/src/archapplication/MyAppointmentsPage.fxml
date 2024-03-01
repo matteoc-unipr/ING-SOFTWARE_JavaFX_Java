@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="myhomerootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="archapplication.MyAppointmentsPageController">
+   <children>
+      <BorderPane prefHeight="450.0" prefWidth="700.0">
+         <top>
+            <AnchorPane prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #180F20;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/1.png" />
+                     </image>
+                  </ImageView>
+                  <Separator prefWidth="700.0" style="-fx-background-color: #00C5A0;" AnchorPane.bottomAnchor="0.0" />
+                  <Text fill="#76e0f2" layoutX="255.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Appointments: " textAlignment="CENTER" wrappingWidth="189.36476731300354">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="200.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="700.0" style="-fx-background-color: #00C5A0;" />
+                  <TextField fx:id="docnameField" alignment="CENTER" editable="false" layoutX="428.0" layoutY="15.2" prefHeight="26.0" prefWidth="113.0" styleClass="textfield" stylesheets="@stylesheet.css" AnchorPane.topAnchor="15.2" />
+                  <TextField fx:id="dateField" alignment="CENTER" editable="false" layoutX="286.0" layoutY="15.2" prefHeight="26.0" prefWidth="142.0" styleClass="textfield" stylesheets="@stylesheet.css" AnchorPane.topAnchor="15.2" />
+                  <TextField fx:id="placeField" alignment="CENTER" editable="false" layoutX="172.0" layoutY="15.2" prefHeight="26.0" prefWidth="113.0" styleClass="textfield" stylesheets="@stylesheet.css" AnchorPane.topAnchor="15.2" />
+                  <TextField fx:id="typeField" alignment="CENTER" editable="false" layoutX="58.0" layoutY="15.2" prefHeight="26.0" prefWidth="113.0" styleClass="textfield" stylesheets="@stylesheet.css" AnchorPane.topAnchor="15.2" />
+                  <Button fx:id="CancelBtn" layoutX="189.0" layoutY="60.8" maxHeight="32.0" maxWidth="194.0" mnemonicParsing="false" onMouseClicked="#CancelApp" prefHeight="32.0" prefWidth="194.0" stylesheets="@stylesheet.css" text="Cancel Appointment" textAlignment="CENTER" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="317.0" AnchorPane.topAnchor="61.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="appidField" alignment="CENTER" editable="false" layoutX="14.0" layoutY="87.0" prefHeight="7.0" prefWidth="57.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="ggg" />
+                  <Text fx:id="WarningText" fill="#ef0000" layoutX="155.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="261.59995126724243" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="MyAppointments" onMouseClicked="#getAppointment" prefHeight="271.0" prefWidth="529.0" stylesheets="@stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="DocNameCol" prefWidth="100.0" style="-fx-text-alignment: center;" text="DOC NAME" />
+                        <TableColumn fx:id="DateCol" prefWidth="144.00001525878906" style="-fx-text-alignment: center;" text="DATE" />
+                        <TableColumn fx:id="PlaceCol" prefWidth="87.20001220703125" style="-fx-text-alignment: center;" text="PLACE" />
+                        <TableColumn fx:id="TypeCol" prefWidth="108.80001831054688" style="-fx-text-alignment: center;" text="TYPE" />
+                        <TableColumn fx:id="AppIdCol" prefWidth="74.39996337890625" style="-fx-text-alignment: center;" text="APP ID" />
+                     </columns>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

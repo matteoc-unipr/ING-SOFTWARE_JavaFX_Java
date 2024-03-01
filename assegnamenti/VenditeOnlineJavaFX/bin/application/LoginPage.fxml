@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="RootPane" maxHeight="450.0" maxWidth="700.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #252926; -fx-max-height: 450; -fx-max-width: 700;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginPageController">
+	<children>
+		<Text fill="#00bf63" layoutX="505.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Text>
+		<TextField id="UserNameField" fx:id="UsernameField" layoutX="437.0" layoutY="173.0" prefWidth="190.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #00bf63; -fx-text-fill: #a4a6a5;" />
+		<PasswordField id="PasswordField" fx:id="PasswordField" layoutX="437.0" layoutY="247.0" prefHeight="26.0" prefWidth="190.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #00bf63; -fx-text-fill: #a4a6a5;" />
+		<Button fx:id="LoginButton" layoutX="507.0" layoutY="329.0" mnemonicParsing="false" onAction="#tryLogIn" style="-fx-background-color: #00bf63; -fx-border-color: #00bf63; -fx-border-radius: 4;" text="Log In" textAlignment="CENTER" />
+		<ImageView fitHeight="359.0" fitWidth="337.0" layoutX="27.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/abiti%20(1).png" />
+         </image></ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="394.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="393.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/key.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Quit" fitHeight="22.0" fitWidth="22.0" layoutX="664.0" layoutY="14.0" onMouseClicked="#quit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/x-circle.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="Wrong" fill="RED" layoutX="438.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" />
+	</children>
+</AnchorPane>

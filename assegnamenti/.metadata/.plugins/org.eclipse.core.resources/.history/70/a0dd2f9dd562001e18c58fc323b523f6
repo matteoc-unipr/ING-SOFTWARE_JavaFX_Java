@@ -1,0 +1,98 @@
+package com.matteo;
+
+import java.util.Scanner;
+
+public class Calculator {
+
+	public static double operation(String op, double n1, double out) {
+		//Switch-case syntax for operations
+		switch(op) {
+		case "+":
+			out += n1;
+			break;
+		case "-":
+			out -= n1;
+			break;
+		case "*":
+			out *= n1;
+			break;
+		case "/":
+			out /= n1;
+			break;
+		case "%":
+			out %= n1;
+			break;
+		default:
+			System.out.println("Invalid operation....Try again");
+			
+		}
+		
+		return out;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		// Opening input stream
+		Scanner input = new Scanner(System.in);
+		
+		double n1, out;
+		out = 0;
+		String op;	// +  -  *  /  %
+		boolean first = true;
+		
+		while (true) {
+			System.out.print("Select operation (+, -, /, *, %)  (q to quit):");
+			op = input.nextLine();
+			
+			//Program ending condition
+			if(op.equalsIgnoreCase("q")) {
+				System.out.println("Program terminated.");
+				break;
+			}	
+			//Reset condition
+			if(op.equalsIgnoreCase("r")) {
+				System.out.println("Reset.");
+				out = 0;
+				first = true;
+				
+			}	
+			
+			//To distinguish if the user needs to insert one or two operands
+			if (first) {
+				System.out.print("Insert operands:");
+				out = input.nextDouble();
+				n1 = input.nextDouble();
+				first = false;
+			}
+			else {
+				System.out.print("Insert operand:");
+				n1 = input.nextDouble();
+			}
+			
+			
+			out = operation(op, n1, out);
+			
+			//Print output
+			System.out.print("Result: ");
+			System.out.println(out);
+					
+
+		}
+		
+
+
+
+
+		input.close();
+	}
+
+}
+

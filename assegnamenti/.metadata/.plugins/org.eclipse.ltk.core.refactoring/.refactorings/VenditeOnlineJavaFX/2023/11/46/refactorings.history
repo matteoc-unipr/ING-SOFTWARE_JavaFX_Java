@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;TableCart&apos; in &apos;application.ReturnProductPageController&apos; to &apos;TableRCart&apos;&#x0D;&#x0A;- Original project: &apos;VenditeOnlineJavaFX&apos;&#x0D;&#x0A;- Original element: &apos;application.ReturnProductPageController.TableCart&apos;&#x0D;&#x0A;- Renamed element: &apos;application.ReturnProductPageController.TableRCart&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;TableCart&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;application{ReturnProductPageController.java[ReturnProductPageController^TableCart" name="TableRCart" references="true" setter="false" stamp="1699865601281" textual="false" version="1.0"/>
+</session>

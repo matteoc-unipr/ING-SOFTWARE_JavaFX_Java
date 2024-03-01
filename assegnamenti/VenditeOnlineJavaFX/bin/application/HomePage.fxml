@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="HomeRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomePageController">
+   <children>
+      <BorderPane fx:id="bp" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #506358;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #252926;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="45.0" prefWidth="700.0">
+                     <children>
+                        <Button layoutX="210.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#ShopPage" style="-fx-background-color: transparent; -fx-text-fill: #00bf63;" text="Shop" />
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="exit" fitHeight="22.0" fitWidth="22.0" layoutX="664.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/x-circle.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="493.0" layoutY="10.0" onMouseClicked="#AddPage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="194.0" layoutY="10.0" onMouseClicked="#ShopPage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/storefront.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="340.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#ReturnPage" style="-fx-background-color: transparent; -fx-text-fill: #00bf63;" text="Return Products" />
+                  <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="321.0" layoutY="10.0" onMouseClicked="#ReturnPage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/arrow-counter-clockwise.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Cart" fitHeight="22.0" fitWidth="22.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/shopping-cart-simple.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="CartBack" fitHeight="22.0" fitWidth="22.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/shopping-cart-simple.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="513.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#AddPage" style="-fx-background-color: transparent; -fx-text-fill: #00bf63;" text="Add Product" />
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <AnchorPane fx:id="slider" focusTraversable="true" prefHeight="410.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="50.0" layoutY="92.0" prefHeight="410.0" prefWidth="200.0" style="-fx-background-color: #252926;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00bf63;" text="Cart" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets left="80.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TableView fx:id="TableCart" prefWidth="190.0" style="-fx-border-color: #00bf63; -fx-border-width: 2;">
+                          <columns>
+                            <TableColumn fx:id="NameCColumn" text="Name" />
+                            <TableColumn fx:id="IdCColumn" prefWidth="60.0" text="ID" />
+                              <TableColumn fx:id="QtyCColumn" prefWidth="48.0" text="Q.ty" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="centerslide" prefHeight="410.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="410.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 15%;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../../icons/pexels-karolina-grabowska-5632388.jpg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="24.0" layoutY="33.0" prefHeight="346.0" prefWidth="200.0" style="-fx-border-color: #00bf63; -fx-border-width: 2; -fx-background-color: #252926;" AnchorPane.leftAnchor="24.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00bf63;" text="Name:">
+                        </Text>
+                        <TextField fx:id="txtName" layoutX="59.0" layoutY="24.0" prefHeight="3.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-text-fill: #a4a6a5;" />
+                        <Text layoutX="14.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00bf63;" text="Price:" />
+                        <Text layoutX="14.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00bf63;" text="ID:" />
+                        <Text layoutX="14.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00bf63;" text="Q.ty:" />
+                        <TextField fx:id="txtPrice" layoutX="59.0" layoutY="78.0" prefHeight="3.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-text-fill: #a4a6a5;" />
+                        <TextField fx:id="txtID" layoutX="59.0" layoutY="128.0" prefHeight="3.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-text-fill: #a4a6a5;" />
+                        <TextField fx:id="txtQty" layoutX="59.0" layoutY="185.0" prefHeight="3.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-text-fill: #a4a6a5;" />
+                        <Button fx:id="BuyButton" alignment="CENTER" layoutX="73.0" layoutY="286.0" mnemonicParsing="false" onMouseClicked="#buyProduct" style="-fx-background-color: #00bf63;" text="Buy" />
+                        <Text layoutX="59.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #a4a6a5;" text="*You can modify quantity" AnchorPane.leftAnchor="59.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtOutputBuy" layoutX="26.0" layoutY="249.0" style="-fx-background-color: transparent; -fx-text-fill: #00bf63;" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="236.0" layoutY="33.0" prefHeight="346.0" prefWidth="456.0" style="-fx-border-color: #252926; -fx-border-width: 2;" AnchorPane.leftAnchor="236.0">
+                     <children>
+                        <TableView fx:id="TableProducts" onMouseClicked="#getProduct" prefHeight="200.0" prefWidth="447.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="NameColumn" prefWidth="112.0" text="Name" />
+                            <TableColumn fx:id="PriceColumn" prefWidth="112.0" text="Price" />
+                              <TableColumn fx:id="IdColumn" prefWidth="112.0" text="ID" />
+                              <TableColumn fx:id="QtyColumn" prefWidth="112.0" text="Quantity" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <Text fontSmoothingType="LCD" layoutX="416.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a product" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

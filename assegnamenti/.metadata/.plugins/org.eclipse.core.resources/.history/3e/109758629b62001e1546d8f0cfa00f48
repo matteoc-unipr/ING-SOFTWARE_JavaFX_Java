@@ -1,0 +1,29 @@
+package com.matteo;
+
+import java.util.Scanner;
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		
+		// Opening input stream
+		Scanner input = new Scanner(System.in);
+		
+		double n1, n2, out;
+		out = 0;
+		String op;	// +  -  *  /  %
+		
+		System.out.print("Select operation (+, -, /, *, %):");
+		op = input.next();
+		System.out.print("Insert operands:");
+		n1 = input.nextDouble();
+		n2 = input.nextDouble();
+
+
+		
+
+
+		input.close();
+	}
+
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="HomeRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="archapplication.HomePageController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #180F20;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="190.0" layoutX="-17.4" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-17.4" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../../icons/1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="exitbtn" fitHeight="22.0" fitWidth="22.0" layoutX="664.0" layoutY="10.0" onMouseClicked="#Quit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/x-square.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Separator layoutX="118.0" layoutY="39.0" prefWidth="200.0" style="-fx-background-color: #00C5A0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Text fill="#76e0f2" layoutX="324.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select an Appointment:" wrappingWidth="204.56476426124573">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <VBox prefHeight="450.0" prefWidth="150.0" style="-fx-background-color: #180F20;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/user%20(1).png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="45.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Text fill="#76e0f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello!" textAlignment="CENTER" wrappingWidth="150.16480088233948">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="FirstNameField" alignment="CENTER" editable="false" style="-fx-background-color: transparent; -fx-text-fill: #76E0F2;">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="LastNameField" alignment="CENTER" editable="false" style="-fx-background-color: transparent; -fx-text-fill: #76E0F2;">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <AnchorPane prefHeight="200.0" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <Separator layoutX="1.0" layoutY="53.0" prefHeight="0.0" prefWidth="150.0" style="-fx-background-color: #00C5A0;" />
+                        <Button id="page-button" fx:id="toMyAppPage" layoutX="11.0" layoutY="75.0" maxHeight="30.0" maxWidth="130.0" mnemonicParsing="false" onMouseClicked="#openMyAppPage" prefHeight="30.0" prefWidth="130.0" stylesheets="@stylesheet.css" text="My Appointments" textAlignment="CENTER" AnchorPane.bottomAnchor="157.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="75.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text fill="#76e0f2" layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your ID: " textAlignment="CENTER" wrappingWidth="51.76477646827698" AnchorPane.bottomAnchor="221.18828125" AnchorPane.topAnchor="22.05078125">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="PatIDField" alignment="CENTER" editable="false" layoutX="78.0" layoutY="14.0" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: transparent; -fx-text-fill: #76E0F2;" AnchorPane.topAnchor="14.0" />
+                        <Button id="page-button" fx:id="refreshBtn" layoutX="14.0" layoutY="124.0" maxHeight="30.0" maxWidth="127.0" mnemonicParsing="false" onMouseClicked="#refreshTable" prefHeight="12.0" prefWidth="127.0" stylesheets="@stylesheet.css" text="Refresh Table" textAlignment="CENTER" AnchorPane.bottomAnchor="101.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="132.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children></VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="Appointments" onMouseClicked="#getAppointment" prefHeight="271.0" prefWidth="529.0" stylesheets="@stylesheet.css">
+                    <columns>
+                      <TableColumn fx:id="DocNameCol" prefWidth="100.0" style="-fx-text-alignment: center;" text="DOC NAME" />
+                        <TableColumn fx:id="DateCol" prefWidth="144.00001525878906" style="-fx-text-alignment: center;" text="DATE" />
+                        <TableColumn fx:id="PlaceCol" prefWidth="87.20001220703125" style="-fx-text-alignment: center;" text="PLACE" />
+                        <TableColumn fx:id="TypeCol" prefWidth="108.80001831054688" style="-fx-text-alignment: center;" text="TYPE" />
+                        <TableColumn fx:id="AppIdCol" prefWidth="74.39996337890625" style="-fx-text-alignment: center;" text="APP ID" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TableView>
+                  <AnchorPane prefHeight="142.0" prefWidth="550.0">
+                     <children>
+                        <TextField fx:id="docnameField" alignment="CENTER" editable="false" layoutX="31.0" layoutY="18.0" prefHeight="26.0" prefWidth="113.0" styleClass="textfield" stylesheets="@stylesheet.css" />
+                        <Separator layoutX="136.0" prefWidth="200.0" style="-fx-background-color: #180F20;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <TextField fx:id="dateField" alignment="CENTER" editable="false" layoutX="144.0" layoutY="18.0" prefHeight="26.0" prefWidth="142.0" styleClass="textfield" stylesheets="@stylesheet.css" />
+                        <TextField fx:id="placeField" alignment="CENTER" editable="false" layoutX="286.0" layoutY="18.0" prefHeight="26.0" prefWidth="113.0" styleClass="textfield" stylesheets="@stylesheet.css" />
+                        <TextField fx:id="typeField" alignment="CENTER" editable="false" layoutX="399.0" layoutY="18.0" prefHeight="26.0" prefWidth="113.0" styleClass="textfield" stylesheets="@stylesheet.css" />
+                        <Button layoutX="163.0" layoutY="66.0" maxWidth="126.0" mnemonicParsing="false" onMouseClicked="#bookApp" prefHeight="12.0" prefWidth="126.0" stylesheets="@stylesheet.css" text="Book Appointment" textAlignment="CENTER" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="65.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <TextField fx:id="appidField" alignment="CENTER" editable="false" layoutX="14.0" layoutY="91.0" prefHeight="7.0" prefWidth="57.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="ggg" />
+                        <Text fx:id="WarningText" fill="#ef0000" layoutX="145.8" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="261.59995126724243" AnchorPane.leftAnchor="145.8" AnchorPane.rightAnchor="142.20004873275758" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

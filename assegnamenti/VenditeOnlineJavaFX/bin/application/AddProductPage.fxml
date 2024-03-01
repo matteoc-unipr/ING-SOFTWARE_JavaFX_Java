@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddProductPageController">
+   <center>
+      <AnchorPane fx:id="addpagepane" prefHeight="410.0" prefWidth="700.0" style="-fx-background-color: #506358;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="410.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 15%;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../icons/pexels-karolina-grabowska-5632388.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="50.0" layoutY="132.0" prefHeight="125.0" prefWidth="600.0" style="-fx-border-color: #00bf63; -fx-border-width: 2; -fx-background-color: #252926;">
+               <children>
+                  <TextField fx:id="ANameField" layoutX="30.0" layoutY="40.0" />
+                  <Spinner fx:id="AQtyField" editable="true" layoutX="453.0" layoutY="40.0" prefHeight="20.0" prefWidth="120.0" />
+                  <Text layoutX="84.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00bf63;" text="Name:" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="285.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00bf63;" text="Price" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="486.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00bf63;" text="Quantity" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="AddBtn" layoutX="281.0" layoutY="86.0" mnemonicParsing="false" onMouseClicked="#addProduct" style="-fx-background-color: #00bf63; -fx-text-fill: #FFFFFF;" text="Add" />
+                  <TextField fx:id="APriceField" layoutX="225.0" layoutY="40.0" />
+               </children>
+            </AnchorPane>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #00bf63;" text="ADD PRODUCT" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtadd" layoutX="175.0" layoutY="273.0" strokeWidth="0.0" style="-fx-fill: #e11111;" textAlignment="CENTER" wrappingWidth="400.0">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

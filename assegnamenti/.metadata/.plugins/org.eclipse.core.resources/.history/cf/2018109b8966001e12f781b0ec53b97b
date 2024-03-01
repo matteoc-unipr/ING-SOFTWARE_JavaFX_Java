@@ -1,0 +1,132 @@
+package com.matteo;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Calculator {
+
+	public static boolean in_array(String e, String[] arr) {
+		// True if an element is in array
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].equals(e)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public static double operation(String op, double n1, double out) {
+		//Switch-case syntax for operations
+		switch(op) {
+		case "+":
+			out += n1;
+			break;
+		case "-":
+			out -= n1;
+			break;
+		case "*":
+			out *= n1;
+			break;
+		case "/":
+			out /= n1;
+			break;
+		case "%":
+			out %= n1;
+			break;
+			
+		}
+		
+		return out;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		// Opening input stream
+		//Scanner input = new Scanner(System.in);
+		
+		double n1, out;
+		out = 0;
+		String op = "";	// +  -  *  /  %
+		boolean first = true;
+		String[] valid_input = {"+","-","*","/","%","q","r"};
+		
+		while (true) {
+			Scanner input = new Scanner(System.in);
+			op = "";
+			System.out.print("Select operation (+, -, /, *, %)  (q to quit):");
+			
+			op = input.nextLine();
+			
+			//Operation validity check
+			if (in_array(op, valid_input) == false) {
+				System.out.println("Invalid operation...Try again.");
+				System.out.print("Select operation (+, -, /, *, %)  (q to quit):");
+				op = input.nextLine();
+			}
+			
+			//Program ending condition
+			if(op.equalsIgnoreCase("q")) {
+				System.out.println("Program terminated.");
+				break;
+			}	
+			//Reset condition
+			if(op.equalsIgnoreCase("r")) {
+				System.out.println("Reset.");
+				out = 0;
+				first = true;
+				System.out.print("Select operation (+, -, /, *, %)  (q to quit):");
+				op = input.nextLine();
+				
+				
+			}	
+			
+			//To distinguish if the user needs to insert one or two operands
+			if (first) {
+				System.out.print("Insert operands:");
+				try {
+					out = input.nextDouble();
+					n1 = input.nextDouble();
+				} catch (InputMismatchException e) {
+					System.out.println("Invalid format: Please insert a double...");
+					System.out.print("Insert operands:");
+					out = input.nextDouble();
+					n1 = input.nextDouble();
+				}
+				first = false;
+			}
+			else {
+				System.out.print("Insert operand:");
+				try {
+					n1 = input.nextDouble();
+				} catch (InputMismatchException ex) {
+					System.out.println("Invalid format: Please insert a double...");
+					System.out.print("Insert operand:");
+					n1 = input.nextDouble();
+					}
+			}
+			
+			
+			out = operation(op, n1, out);
+			
+			//Print output
+			System.out.print("Result: ");
+			System.out.println(out);
+		
+		}
+		
+
+			
+
+
+		
+	}
+
+}
+
